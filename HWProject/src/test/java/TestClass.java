@@ -114,14 +114,14 @@ public class TestClass {
 		  agreeCheckBox.click();
 
 		  //Проверка корректности полей ввода
-		  Assert.assertEquals("Некорректное значение", "Фамилия", labelLastName.getText());
-		  Assert.assertEquals("Некорректное значение", "Имя", dmsWindowHeadingButton.getText());
-		  Assert.assertEquals("Некорректное значение", "Отчество", dmsWindowHeadingButton.getText());
-		  Assert.assertEquals("Некорректное значение", "Москва", dmsWindowHeadingButton.getText());
-		  Assert.assertEquals("Некорректное значение", "+7 (800) 200-09-00", dmsWindowHeadingButton.getText());
-		  Assert.assertEquals("Некорректное значение", "qwertyqwerty", dmsWindowHeadingButton.getText());
-		  Assert.assertEquals("Некорректное значение", "17.07.2020", dmsWindowHeadingButton.getText());
-		  Assert.assertEquals("Некорректное значение", "Комментарий", dmsWindowHeadingButton.getText());
+		  Assert.assertEquals("Некорректное значение", "Фамилия", labelLastName.getAttribute("value"));
+		  Assert.assertEquals("Некорректное значение", "Имя", labelFirstName.getAttribute("value"));
+		  Assert.assertEquals("Некорректное значение", "Отчество", labelMiddleName.getAttribute("value"));
+		  Assert.assertEquals("Некорректное значение", "Москва", selectRegion.getAttribute("value"));
+		  Assert.assertEquals("Некорректное значение", "+7 (800) 200-09-00", labelPhone.getAttribute("value"));
+		  Assert.assertEquals("Некорректное значение", "qwertyqwerty", labelMail.getAttribute("value"));
+		  Assert.assertEquals("Некорректное значение", "17.07.2020", labelDate.getAttribute("value"));
+		  Assert.assertEquals("Некорректное значение", "Комментарий", labelComment.getAttribute("value"));
 
 		  //Клик по кнопке: Отправить
 		  String requestFormXPath = "//button[@id='button-m']";
