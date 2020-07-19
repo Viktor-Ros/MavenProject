@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<!-- Координаты проекта -->
+  <groupId>ru.ViktorRoslyakov</groupId>	<!-- Вложенные папки -->
+  <artifactId>HWArcadiy1</artifactId>	<!-- Название проекта -->
+  <version>0.0.1-SNAPSHOT</version>	<!-- Версия проекта -->
+  <packaging>war</packaging>
+
+  <name>HWArcadiy1 Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties><!-- Переменные помника <Название>значение</Название> -->
+  
+  	<projectEncoding>UTF-8</projectEncoding>
+  	<javaVersion>1.7</javaVersion>
+  	
+    <project.build.sourceEncoding>${projectEncoding}</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>${projectEncoding}</project.reporting.outputEncoding>
+    <maven.compiler.source>${javaVersion}</maven.compiler.source><!-- Версия Java проекта -->
+    <maven.compiler.target>${javaVersion}</maven.compiler.target>
+    
+    <junit.version>4.11</junit.version>
+    <servelet.version>3.1.0</servelet.version> 
+    <junit.jupiter.version>5.6.2</junit.jupiter.version>
+    <junit.platform.version>1.6.2</junit.platform.version>
+    <selenium.version>3.141.59</selenium.version>
+
+  </properties>
+  
+
+  <dependencies><!-- Зависимости от библиотек *ВСЕГДА УКАЗЫВАТЬ РЕПОЗИТОРИЙ БИБЛИОТЕКИ*-->
+  
+	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+	<dependency>
+    	<groupId>org.junit.jupiter</groupId>
+    	<artifactId>junit-jupiter-engine</artifactId>
+    	<version>${junit.jupiter.version}</version>
+    	<scope>test</scope><!-- Область действия библиотеки-->
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+	<dependency>
+    	<groupId>org.junit.jupiter</groupId>
+    	<artifactId>junit-jupiter-params</artifactId>
+    	<version>${junit.jupiter.version}</version>
+    	<scope>test</scope>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+	<dependency>
+    	<groupId>org.junit.platform</groupId>
+    	<artifactId>junit-platform-launcher</artifactId>
+    	<version>${junit.platform.version}</version>
+    	<scope>test</scope>
+	</dependency>
+		    
+	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	<dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>javax.servlet-api</artifactId>
+    	<version>${servelet.version}</version>
+    	<scope>provided</scope>
+	</dependency>
+		   
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+	<dependency>
+    	<groupId>org.seleniumhq.selenium</groupId>
+    	<artifactId>selenium-java</artifactId>
+    	<version>${selenium.version}</version>
+	</dependency>
+  </dependencies>
+
+  <build>
+    <finalName>HWArcadiy1</finalName>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
