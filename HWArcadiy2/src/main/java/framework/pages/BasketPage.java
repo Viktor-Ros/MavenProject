@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import framework.utils.DriverManager;
+import framework.utils.MyExpectedCondition;
 
 public class BasketPage extends Page{//Страница корзины
 	
@@ -26,6 +27,9 @@ public class BasketPage extends Page{//Страница корзины
 	
 	@FindBy(xpath = "//span[@class= 'cart-link__price']")
 	private WebElement basketPriceLabel;//Цена корзины
+	
+	@FindBy(xpath = "//span[@class = 'cart-link__badge']")
+	private WebElement countPSLabel;//Кол-во PS
 	
 	@FindBy(xpath = "//button[@data-commerce-target= '040b4001-3e6b-11ea-a20f-00155d03332b' and @data-commerce-action = 'CART_ADD']")
 	private WebElement addPSButton;//Добавить PS
@@ -101,7 +105,7 @@ public class BasketPage extends Page{//Страница корзины
 	
 	public BasketPage addTwoPS() {
 		
-		new WebDriverWait(DriverManager.getDriver(), 10)
+		/*new WebDriverWait(DriverManager.getDriver(), 10)
 		.until(ExpectedConditions.elementToBeClickable(addPSButton)).click();	
 		
 		try {
@@ -112,6 +116,13 @@ public class BasketPage extends Page{//Страница корзины
 		
 		new WebDriverWait(DriverManager.getDriver(), 10)
 		.until(ExpectedConditions.elementToBeClickable(addPSButton)).click();
+		*/
+		
+		for(int i = 1; i < 3; i++) {
+			
+			new WebDriverWait(DriverManager.getDriver(), 10)
+			.until(MyExpectedCondition.textToBePresentInElement(countPSLabel,addPSButton,i)).click();
+		}
 		
 		return this;      	
 	}
