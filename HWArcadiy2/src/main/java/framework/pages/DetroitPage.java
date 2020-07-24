@@ -1,13 +1,17 @@
 package framework.pages;
 
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import framework.products.Product;
 import framework.utils.DriverManager;
+import framework.utils.MyExpectedCondition;
 
 public class DetroitPage extends Page {//Страница Detroit
 	
@@ -49,12 +53,13 @@ public class DetroitPage extends Page {//Страница Detroit
 		
 		return this;
 	}
-	
-	public DetroitPage checkBasketPrice() {	//int detroitPrice, int psPrice) {	
+
+	public DetroitPage checkBasketPrice() {
 		
 		int sum = app.getPSPage().getPSProduct().getGarantPrice() + app.getDetroitPage().getDetroitProduct().getPrice();
 		
-		try {
+		/*
+			try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -63,10 +68,16 @@ public class DetroitPage extends Page {//Страница Detroit
 		int priceBasket = Integer.parseInt(new WebDriverWait(DriverManager.getDriver(), 10)
 				.until(ExpectedConditions.elementToBeClickable(priceBasketLabel)).getAttribute("innerHTML")
 				.replaceAll("\\s+",""));		
-		
-    	Assertions.assertEquals(priceBasket,sum,"Цены не совпадают");
-    	
-    	return this;
+				
+						System.out.println(priceBasket);
+
+				    	Assertions.assertEquals(priceBasket,sum,"Цены не совпадают");
+		*/		
+	
+		new WebDriverWait(DriverManager.getDriver(), 10)
+		.until(MyExpectedCondition.textToBePresentInElement(priceBasketLabel,sum));
+
+		return this;
 	}
 	
 	public BasketPage goBasketButton() {
