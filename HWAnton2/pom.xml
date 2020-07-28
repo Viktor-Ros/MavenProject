@@ -10,7 +10,7 @@
   
 	<properties>
 		<projectEncoding>UTF-8</projectEncoding>
-  		<javaVersion>1.7</javaVersion>
+  		<javaVersion>1.8</javaVersion>
   	
     	<project.build.sourceEncoding>${projectEncoding}</project.build.sourceEncoding>
     	<project.reporting.outputEncoding>${projectEncoding}</project.reporting.outputEncoding>
