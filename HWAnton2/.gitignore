@@ -1,0 +1,6 @@
+/target/
+# File ignoring
+#.project
+
+# Folder ignoring
+.settings
