@@ -3,9 +3,8 @@ package basetest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
-import framework.utils.InitManager;
-import framework.utils.PagesManager;
-import framework.utils.StepsManager;
+import framework.managers.InitManager;
+import framework.managers.StepsManager;
 
 public class BaseAllureTest {
 
