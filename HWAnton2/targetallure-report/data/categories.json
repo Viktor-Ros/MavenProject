@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Значение: Процентная ставка не совпадает ==> expected: <11> but was: <8,4>",
+      "children" : [ {
+        "name" : "Расчет ипотеки на готовое жильё",
+        "uid" : "cbe1e28b0ff18fd1",
+        "parentUid" : "70220f7a6e60273042f19b1fcfa474a7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1596024221089,
+          "stop" : 1596024252882,
+          "duration" : 31793
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Расчет ипотеки на готовое жильё",
+        "uid" : "4490c78b3bdf1bdc",
+        "parentUid" : "70220f7a6e60273042f19b1fcfa474a7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1596024221757,
+          "stop" : 1596024252342,
+          "duration" : 30585
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "70220f7a6e60273042f19b1fcfa474a7"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

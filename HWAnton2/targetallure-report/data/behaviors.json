@@ -1,0 +1,39 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Расчет ипотеки на готовое жильё",
+    "uid" : "cbe1e28b0ff18fd1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1596024221089,
+      "stop" : 1596024252882,
+      "duration" : 31793
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Ипотека",
+    "children" : [ {
+      "name" : "Расчет ипотеки на готовое жильё",
+      "children" : [ {
+        "name" : "Расчет ипотеки на готовое жильё",
+        "uid" : "4490c78b3bdf1bdc",
+        "parentUid" : "c942b15862071b49f84962e520732eb5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1596024221757,
+          "stop" : 1596024252342,
+          "duration" : 30585
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c942b15862071b49f84962e520732eb5"
+    } ],
+    "uid" : "34054c60ab25dfbbb9d926743c99e6e3"
+  } ]
+}

@@ -1,0 +1,21 @@
+[ {
+  "uid" : "4490c78b3bdf1bdc",
+  "name" : "Расчет ипотеки на готовое жильё",
+  "time" : {
+    "start" : 1596024221757,
+    "stop" : 1596024252342,
+    "duration" : 30585
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "cbe1e28b0ff18fd1",
+  "name" : "Расчет ипотеки на готовое жильё",
+  "time" : {
+    "start" : 1596024221089,
+    "stop" : 1596024252882,
+    "duration" : 31793
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

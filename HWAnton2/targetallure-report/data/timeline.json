@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-7C8D4ED",
+    "children" : [ {
+      "name" : "6804@DESKTOP-7C8D4ED.main(1)",
+      "children" : [ {
+        "name" : "Расчет ипотеки на готовое жильё",
+        "uid" : "4490c78b3bdf1bdc",
+        "parentUid" : "b12b2d6d760cb56cda10d417a16bbb02",
+        "status" : "failed",
+        "time" : {
+          "start" : 1596024221757,
+          "stop" : 1596024252342,
+          "duration" : 30585
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Расчет ипотеки на готовое жильё",
+        "uid" : "cbe1e28b0ff18fd1",
+        "parentUid" : "b12b2d6d760cb56cda10d417a16bbb02",
+        "status" : "failed",
+        "time" : {
+          "start" : 1596024221089,
+          "stop" : 1596024252882,
+          "duration" : 31793
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b12b2d6d760cb56cda10d417a16bbb02"
+    } ],
+    "uid" : "d8977089e9aa760fb166f4584e2a932c"
+  } ]
+}

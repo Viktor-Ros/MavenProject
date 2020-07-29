@@ -1,0 +1,42 @@
+{
+  "febb9bc85d1dd9e364f8792695532c3c" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "cbe1e28b0ff18fd1",
+      "status" : "failed",
+      "statusDetails" : "Значение: Процентная ставка не совпадает ==> expected: <11> but was: <8,4>",
+      "time" : {
+        "start" : 1596024221089,
+        "stop" : 1596024252882,
+        "duration" : 31793
+      }
+    } ]
+  },
+  "838485b4a5813c8c0e4f9ebfe3220849" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4490c78b3bdf1bdc",
+      "status" : "failed",
+      "statusDetails" : "Значение: Процентная ставка не совпадает ==> expected: <11> but was: <8,4>",
+      "time" : {
+        "start" : 1596024221757,
+        "stop" : 1596024252342,
+        "duration" : 30585
+      }
+    } ]
+  }
+}
