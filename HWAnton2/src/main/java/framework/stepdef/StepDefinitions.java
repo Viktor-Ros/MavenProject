@@ -1,6 +1,6 @@
 package framework.stepdef;
 
-import framework.utils.StepsManager;
+import framework.managers.StepsManager;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

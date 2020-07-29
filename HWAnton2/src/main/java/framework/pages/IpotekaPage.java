@@ -11,8 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import framework.utils.CustomMethods;
-import framework.utils.DriverManager;
+import framework.managers.DriverManager;
+import framework.utils.MethodsUtils;
 
 /**
  * Страница ипотеки
@@ -150,12 +150,12 @@ public class IpotekaPage extends Page{
 			
 			if(elementName.equals(name)) {
 								
-				Assertions.assertEquals(value,CustomMethods.returnNumber(elementValue),"Значение: " + elementName + " не совпадает");
+				Assertions.assertEquals(value,MethodsUtils.returnNumber(elementValue),"Значение: " + elementName + " не совпадает");
 				return this;
 			}
 		}
 		
-		//Assertions.fail("Поле не найдено");
+		Assertions.fail("Поле " + name + " не найдено");
 		
 		return this;
 	}	

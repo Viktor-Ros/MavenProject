@@ -2,9 +2,9 @@ package framework.steps;
 
 import org.openqa.selenium.support.PageFactory;
 
-import framework.utils.DriverManager;
-import framework.utils.PagesManager;
-import framework.utils.StepsManager;
+import framework.managers.DriverManager;
+import framework.managers.PagesManager;
+import framework.managers.StepsManager;
 
 public class BaseStep {
 	

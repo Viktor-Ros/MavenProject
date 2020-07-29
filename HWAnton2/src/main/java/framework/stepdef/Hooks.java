@@ -1,7 +1,7 @@
 package framework.stepdef;
 
+import framework.managers.InitManager;
 import framework.utils.AllureUtils;
-import framework.utils.InitManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
