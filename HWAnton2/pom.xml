@@ -22,15 +22,10 @@
     	<selenium.version>3.141.59</selenium.version>
     	<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>	
     	<aspectj.version>1.8.10</aspectj.version>
-		<allure.junit5.version>2.13.2</allure.junit5.version>
-    	<slf4j.version>1.7.30</slf4j.version>
-    	
+		<allure.junit5.version>2.13.2</allure.junit5.version>    	
     	<allure.maven.version>2.10.0</allure.maven.version>
-    	
     	<surefire-provider>1.2.0</surefire-provider>
-    	
     	<cucumber.version>5.5.0</cucumber.version>
-    	
   		<allure.cucumber5.version>2.13.2</allure.cucumber5.version>
     	
   	</properties>
@@ -42,22 +37,6 @@
     		<artifactId>junit-jupiter-engine</artifactId>
     		<version>${junit.jupiter.version}</version>
 		</dependency>
-		
-			<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
-		<!-- <dependency>
-    		<groupId>org.junit.jupiter</groupId>
-    		<artifactId>junit-jupiter-params</artifactId>
-    		<version>${junit.jupiter.version}</version>
-		</dependency>  -->
-	
-		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
-		<!--<dependency>
-    		<groupId>org.junit.platform</groupId>
-    		<artifactId>junit-platform-launcher</artifactId>
-    		<version>${junit.platform.version}</version>
-		</dependency>
-		  -->
-		  
 		   
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -88,13 +67,14 @@
     		<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber4-jvm -->
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber5-jvm -->
 		<dependency>
     		<groupId>io.qameta.allure</groupId>
     		<artifactId>allure-cucumber5-jvm</artifactId>
     		<version>${allure.cucumber5.version}</version>	
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-surefire-provider -->
 		<dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-surefire-provider</artifactId><!-- Библиотека, позволяющая Maven Surfire Plugin понимать команды junit5-->
