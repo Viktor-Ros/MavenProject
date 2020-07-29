@@ -20,13 +20,18 @@
     	<junit.jupiter.version>5.6.2</junit.jupiter.version>
     	<junit.platform.version>1.6.2</junit.platform.version>
     	<selenium.version>3.141.59</selenium.version>
-    	<maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>	
+    	<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>	
     	<aspectj.version>1.8.10</aspectj.version>
 		<allure.junit5.version>2.13.2</allure.junit5.version>
     	<slf4j.version>1.7.30</slf4j.version>
+    	
     	<allure.maven.version>2.10.0</allure.maven.version>
+    	
+    	<surefire-provider>1.2.0</surefire-provider>
+    	
     	<cucumber.version>5.5.0</cucumber.version>
-  		<allure.cucumber4.version>2.12.1</allure.cucumber4.version>
+    	
+  		<allure.cucumber5.version>2.13.2</allure.cucumber5.version>
     	
   	</properties>
 
@@ -39,18 +44,20 @@
 		</dependency>
 		
 			<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
-		<dependency>
+		<!-- <dependency>
     		<groupId>org.junit.jupiter</groupId>
     		<artifactId>junit-jupiter-params</artifactId>
     		<version>${junit.jupiter.version}</version>
-		</dependency>
+		</dependency>  -->
 	
 		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
-		<dependency>
+		<!--<dependency>
     		<groupId>org.junit.platform</groupId>
     		<artifactId>junit-platform-launcher</artifactId>
     		<version>${junit.platform.version}</version>
 		</dependency>
+		  -->
+		  
 		   
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -64,13 +71,6 @@
     		<groupId>io.qameta.allure</groupId>
     		<artifactId>allure-junit5</artifactId>
    			<version>${allure.junit5.version}</version>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-		<dependency>
-   			<groupId>org.slf4j</groupId>
-   			<artifactId>slf4j-simple</artifactId>
-   			<version>${slf4j.version}</version>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
@@ -91,9 +91,23 @@
 		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber4-jvm -->
 		<dependency>
     		<groupId>io.qameta.allure</groupId>
-    		<artifactId>allure-cucumber4-jvm</artifactId>
-    		<version>${allure.cucumber4.version}</version>
-		</dependency>		
+    		<artifactId>allure-cucumber5-jvm</artifactId>
+    		<version>${allure.cucumber5.version}</version>	
+		</dependency>
+		
+		<dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-surefire-provider</artifactId><!-- Библиотека, позволяющая Maven Surfire Plugin понимать команды junit5-->
+            <version>${surefire-provider}</version>
+        </dependency>	
+		
+		<dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId><!-- Подключаем при использовании junit5, тк он новый и работает не везде -->
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+	
   </dependencies> 
   
 	<build>
@@ -114,7 +128,7 @@
           			<properties>
                         <property>
                             <name>listener</name>
-                            <value>io.qameta.allure.junit5.AllureJunit5</value>
+                            <value>io.qameta.allure.junit5.AllureJunit5</value><!-- Версия 5 должна совпадать с первой цифрой версий Cucumber-java и Cucumber-junit -->
                         </property>
                     </properties>
           			<systemPropertyVariables>
@@ -136,7 +150,8 @@
                 <artifactId>allure-maven</artifactId>
                 <version>${allure.maven.version}</version>
                 <configuration>
-                    <reportDirectory>${project.build.directory}target/allure-report</reportDirectory><!-- Папка для отчетов -->
+                <reportVersion>${allure.maven.version}</reportVersion>
+                    <reportDirectory>${project.build.directory}allure-report</reportDirectory><!-- Папка для отчетов -->
                 </configuration>
             </plugin> 
 		</plugins>
