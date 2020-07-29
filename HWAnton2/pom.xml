@@ -131,7 +131,7 @@
                 <version>${allure.maven.version}</version>
                 <configuration>
                 <reportVersion>${allure.maven.version}</reportVersion>
-                    <reportDirectory>${project.build.directory}allure-report</reportDirectory><!-- Папка для отчетов -->
+                    <reportDirectory>${project.build.directory}/allure-report</reportDirectory><!-- Папка для отчетов -->
                 </configuration>
             </plugin> 
 		</plugins>
