@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import framework.managers.DriverManager;
-import framework.utils.AllureUtils;
 import io.qameta.allure.Step;
 
 public class StartPage extends Page{
@@ -25,7 +24,6 @@ public class StartPage extends Page{
 	
 	@Step("Выбор услуги")
 	public ContributionPage selectService(String name) {
-				AllureUtils.addScreenshot();
 		for(WebElement element : servicesList) {
 			
 			WebElement labelService = element.findElement(By.xpath(".//div[@class='service__title-text']"));
