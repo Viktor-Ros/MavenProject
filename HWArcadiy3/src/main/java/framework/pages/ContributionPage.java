@@ -2,7 +2,7 @@ package framework.pages;
 
 import java.util.List;
 
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -59,7 +59,7 @@ public class ContributionPage extends Page{
 			}
 		}
 		
-		Assertions.fail("Такой валюты нет: " + name);
+		Assert.fail("Такой валюты нет: " + name);
 
 		return this;
 	}
@@ -100,7 +100,7 @@ public class ContributionPage extends Page{
 			return this;
 		}
 		
-		Assertions.fail("Такой опции нет: " + name);
+		Assert.fail("Такой опции нет: " + name);
 		
 		return this;
 	}
@@ -130,7 +130,7 @@ public class ContributionPage extends Page{
 			}
 		}
 		
-		Assertions.fail("Такой дополнительной опции нет: " + name);
+		Assert.fail("Такой дополнительной опции нет: " + name);
 
 		return this;
 	}
@@ -160,9 +160,9 @@ public class ContributionPage extends Page{
 				String valueLabel = new WebDriverWait(DriverManager.getDriver(), 10)
 						.until(ExpectedConditions.elementToBeClickable(valueElement)).getAttribute("innerHTML");
 				
-				if(bool == true) {
+				if(bool) {
 					
-					Assertions.assertEquals(value, MethodsUtils.returnNumber(valueLabel), "Значения " + name + " не совпадают");
+					Assert.assertEquals("Значения " + name + " не совпадают", value, MethodsUtils.returnNumber(valueLabel));
 					return this;
 					
 				}	
@@ -181,11 +181,11 @@ public class ContributionPage extends Page{
 			String valueLabel = new WebDriverWait(DriverManager.getDriver(), 10)
 					.until(ExpectedConditions.elementToBeClickable(labelValue)).getAttribute("innerHTML");
 						
-			Assertions.assertEquals(value, MethodsUtils.returnNumber(valueLabel), "Значения " + name + " не совпадают");
+			Assert.assertEquals("Значения " + name + " не совпадают", value, MethodsUtils.returnNumber(valueLabel));
 			return this;
 		}
 		
-		Assertions.fail("Такого параметра нет: " + name);
+		Assert.fail("Такого параметра нет: " + name);
 
 		return this;
 	}

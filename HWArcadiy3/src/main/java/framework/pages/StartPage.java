@@ -2,7 +2,7 @@ package framework.pages;
 
 import java.util.List;
 
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,7 +41,7 @@ public class StartPage extends Page{
 				return app.getContributionPage();
 			}
 		}
-		Assertions.fail("Такой услуги нет: " + name);
+		Assert.fail("Такой услуги нет: " + name);
 		
 		return app.getContributionPage();
 	}

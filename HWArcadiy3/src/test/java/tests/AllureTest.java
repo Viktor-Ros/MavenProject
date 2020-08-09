@@ -1,6 +1,7 @@
 package tests;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 
 import basetests.BaseAllureTest;
 
@@ -15,8 +16,7 @@ public class AllureTest extends BaseAllureTest{
 						  .setContributionParam("На срок", "6")
 						  .setContributionParam("Ежемесячное пополнение", "50000")
 						  .additionalOptionsOn("Ежемесячная капитализация")
-						  .checkParametr("Начислено", "7422,56")
-						  //.checkParametr("Начислено %", "7422,56")
+						  .checkParametr("Начислено %", "7422,56")
 						  .checkParametr("Пополнение за 6 месяцев", "250000")
 						  .checkParametr("К снятию через 6 месяцев", "557422,56");
 	
