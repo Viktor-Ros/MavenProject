@@ -25,8 +25,6 @@
         <allure.maven.version>2.10.0</allure.maven.version>
         <surefire.provider.version>1.2.0</surefire.provider.version>
         <aspectj.version>1.9.4</aspectj.version>
-
-
     </properties>
 
     <dependencies>
@@ -38,23 +36,17 @@
             <version>${selenium.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-       <!-- <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-        </dependency>-->
-
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit4</artifactId>
             <version>${allure.junit4.version}</version>
         </dependency>
+        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13</version>
+            <version>${junit.version}</version>
         </dependency>
 
     </dependencies>
