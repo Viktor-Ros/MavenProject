@@ -43,6 +43,7 @@
             <version>${allure.junit4.version}</version>
         </dependency>
         
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
